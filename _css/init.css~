@@ -1,0 +1,97 @@
+.page {
+	width: 900px;
+	margin:0 auto;
+	padding:0;
+}
+header {
+	margin:0px;
+	display: inline-block;
+	width: 100px;
+      background: -webkit-gradient(
+                  linear,
+                  left bottom,
+                  left top,
+                  color-stop(0.45, rgb(252,242,211)),
+                  color-stop(0.73, rgb(249,250,232))
+                );
+      background: -moz-linear-gradient(
+                        center bottom,
+                        rgb(252,242,211) 45%,
+                        rgb(249,250,232) 73%
+                      );
+}
+header .logo {
+      text-indent: -9999px;
+      color:#fff;
+}
+header .logo span {
+      background: url(../_img/androidPirate.png) no-repeat;
+      height: 63px;
+      width: 69px;
+      display: block;
+      margin: 0 auto;
+      background-position: 50% 50%;
+}
+
+header nav { color:#000;}
+	nav ul {list-style:none;}
+	nav ul li {display:block;}
+	nav ul li a {display:block; color:#000; text-decoration:none;}
+	nav ul li a:hover, nav ul li.active a {background: #fff; color:#000; text-decoration:none; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
+
+
+/* Article Styles */
+article#main {
+	display:inline-block;
+	width:693px;
+	vertical-align:top;
+	padding:32px;
+	margin-top:13px;
+}
+article ul {
+	list-style:none;
+}
+
+
+/* Vertical Menu */
+.vMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.vMenu li {
+    margin: 0;
+    padding: 0;
+    background-image: none;
+}
+.vMenu a {
+    background: transparent;
+    display: block;
+    height: 35px;
+    overflow: hidden;
+    padding: 7px 5px 7px 15px;
+    text-decoration: none;
+    border-top: solid 1px #fff;
+    color: #999;
+    font-size: 90%;
+}
+.vMenu a strong {
+    font-weight: normal;
+    font-size: 140%;
+    padding-bottom: 1px;
+    display: block;
+    color: #444;
+}
+.vMenu a:hover, .vMenu .current a {
+    background: #fff;
+    color: #666;
+    border-top: solid 1px #ccc;
+}
+.vMenu a:hover strong {
+    color: #000;
+}
+
+/* Page Sections */
+#pageProperties {
+    margin: 20px 0;
+}

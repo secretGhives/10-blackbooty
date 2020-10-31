@@ -1,0 +1,182 @@
+/*
+                 ☆   
+                   ,.                               _.
+                   Y8L                             ,8P
+                    `8L                           ,8F
+                     `8L      ___.,ooooo.__      ,8P
+                      `8b,oo888888L`888888888bood8P
+                     ,o8888888888888.Y888888888888o.
+                  ,o88888888888888888b.`Y888888888888o.
+                ,d8888888888888888888888o_``Y8888888888b.
+               d88888888P88888888888888888bo.  '"YP888888b.
+             ,88888888'   Y88888888888888888'        `'`""Y>
+            d888888888L   d88888888888888888.       ,oooo____
+           d888888888888888888888888888888888o_   _o888888888b
+          ,888888888888888888888888888888888888888888888888888.
+    ___   d8888888888888888888888888888888888888888888888888888
+   d888b. 88888888888888888888888888888888888888888888888888888[
+  `88888b]8888888888PPY88PP88P"Y88P"P8PPY88PPY88PP8888888888888b ,ooo.
+   Y88888L_                                                     d88888.
+  ,8888888888oooo__                                            ,888888
+ d888888PYPY888888888booo._                          __,oooooo8888888[
+ Y8888P'_oo_  '`""PP888888888ooooo_    __,ooooooo888888888888888888888.
+   ''' d88888.        ''Y88888888888888888888888888PPPP"""''[,_ Y888888
+       Y888888ooooooo88888888888888888888888888boo__      ,88888p`Y88PP
+        `888888888888888PPP""""'''    '`""PP8888888888oood888888P
+         d88888P"'''                          ''"YPY8888888888P'
+        ]88888P                                       '`888888.
+        `8888P                                          ] LCR b
+                                                         Y8888'
+                                                           `'
+		     .-"-.            .-"-.            .-"-.           .-"-.
+		   _/_-.-_\_        _/.-.-.\_        _/.-.-.\_       _/.-.-.\_
+		  / __} {__ \      /|( o o )|\      ( ( o o ) )     ( ( o o ) )
+		 / //  "  \\ \    | //  "  \\ |      |/  "  \|       |/  "  \|
+		/ / \'---'/ \ \  / / \'---'/ \ \      \'/^\'/         \ .O. /
+		\ \_/`"""`\_/ /  \ \_/`"""`\_/ /      /`\ /`\         /`"""`\
+		 \           /    \           /      /  /|\  \       /       \
+		  NO EYE RAPE      NO EAR RAPE     NO MOUTH RAPE  OKAY MOUTH RAPE
+
+*/
+
+/*
+   General UI Helpers
+*/
+
+/* General Floats */
+.floatLeft {float: left; display:inline;}
+.floatRight {float: right; display:inline;}
+.floatNone {float: none;}
+.floatClear {clear: both;}
+.clearFloat:after { content: " "; display: block; clear: both; visibility: hidden; height: 0; font-size: 0; }
+.clearFloat { display: inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .clearFloat { height:1%; }
+.clearFloat { display:block; }
+/* end clearfix */
+
+/* Visual Aspects */
+.hidden {display: none;}
+.hide {visibility: hidden;}
+
+/* Text colors */
+.txtGreen {color: lime}
+.txtRed {color: red}
+.txtBlue {color: skyblue}
+.txtOrange {color: orange}
+
+/* Text Shadow */
+.txtShadow {
+	 text-shadow:1px 1px 1px #A1A1A1;
+	 -webkit-text-shadow:1px 1px 1px #A1A1A1;
+	 -moz-text-shadow:1px 1px 1px #A1A1A1;
+	 -o-text-shadow:1px 1px 1px #A1A1A1;
+}
+
+/* Background Colors */
+.bgGreen {background: green}
+.bgRed {background: red}
+.bgBlue {background: skyblue}
+.bgOrange {background: orange}
+
+/* Corner radius */
+.corner-tl { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; }
+.corner-tr { -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+.corner-bl { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; }
+.corner-br { -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+.corner-top { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+.corner-bottom { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+.corner-right {  -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+.corner-left { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; }
+.corner-all { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+
+/* Image Borders */
+.imgBorder { border: solid 10px #fff; }
+
+/* Box Shadow */
+.boxShadow {
+    box-shadow:0px 0px 10px #D1D1D1;
+    -webkit-box-shadow:0px 0px 10px #D1D1D1;
+    -moz-box-shadow:0px 0px 10px #D1D1D1;
+    -o-box-shadow:0px 0px 10px #D1D1D1;
+    behavior: url(ie-css3.htc);
+}
+
+.pad_5 { padding: 5px; }
+.pad_10 { padding: 10px; }
+
+/* Effects */
+.glass {
+   margin: 0px;
+   padding: 0;
+   border: 1px solid rgba(0,0,0,0.5);
+   border-radius: 4px 4px 4px 4px;
+   background: rgba(0,0,0,0.25);
+   box-shadow: 0 2px 6px rgba(0,0,0,0.2), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.2);
+   -o-box-shadow: 0 2px 6px rgba(0,0,0,0.2), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.2);
+   -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.2), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.2);
+   -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.2), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.2);
+}
+.gradientBg {
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.45, rgb(252,242,211)),
+		color-stop(0.73, rgb(249,250,232))
+	);
+	background: -moz-linear-gradient(
+		center bottom,
+		rgb(252,242,211) 45%,
+		rgb(249,250,232) 73%
+	);
+}
+
+
+/* Positioning */
+.deadCenter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;     /* set width manualy */
+    height: 50%;    /* set height manualy */
+    margin: auto;
+}
+
+/* Icons */
+.helicopter {
+    display:block;
+    width:32px;
+    height:32px;
+    text-indent:-9999px;
+    background: transparent url(http://cursors0.totallyfreecursors.com/thumbnails/helicopter.gif);
+}
+.airplane {
+    display:block;
+    width:32px;
+    height:32px;
+    text-indent:-9999px;
+    background: transparent url(http://www.myemoticons.com/images/objects/other/airplane.gif);
+}
+
+
+
+/* bubbles tips
+----------------------------------------------------------------- */
+.tipsy { padding: 5px; font-size: 10px; position: absolute; z-index: 100000; }
+  .tipsy-inner { padding: 5px 8px 4px 8px; background-color: black; color: white; max-width: 200px; text-align: center; }
+  .tipsy-inner { border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px; }
+  .tipsy-arrow { position: absolute; background: url('../_img/tipsy.gif') no-repeat top left; width: 9px; height: 5px; }
+  .tipsy-n .tipsy-arrow { top: 0; left: 50%; margin-left: -4px; }
+    .tipsy-nw .tipsy-arrow { top: 0; left: 10px; }
+    .tipsy-ne .tipsy-arrow { top: 0; right: 10px; }
+  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -4px; background-position: bottom left; }
+    .tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; background-position: bottom left; }
+    .tipsy-se .tipsy-arrow { bottom: 0; right: 10px; background-position: bottom left; }
+  .tipsy-e .tipsy-arrow { top: 50%; margin-top: -4px; right: 0; width: 5px; height: 9px; background-position: top right; }
+  .tipsy-w .tipsy-arrow { top: 50%; margin-top: -4px; left: 0; width: 5px; height: 9px; }
+
+
+

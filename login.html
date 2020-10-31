@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset=utf-8> 
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /> 
+<title>BLACK BOOTY - APK Heaven</title> 
+<meta name="keywords" content="android, android apk, cracked apk, cracked android apps, android apps, apk apps" /> 
+<meta name="description" content="Place where Pirates gather!" /> 
+ 
+<!-- Load all the cool gadgets --> 
+<script type="text/javascript" src="_js/jquery-1.4.2.min.js"></script> 
+<script language="javascript">
+$(document).ready(function()
+{
+	$("#login_form").submit(function()
+	{
+		//remove all the class add the messagebox classes and start fading
+		$("#msgbox").removeClass().addClass('messagebox').text('mmmm....').fadeIn(1000);
+		//check the username exists or not from ajax
+		$.post("_php/login.php",{ user_name:$('#username').val(),password:$('#password').val(),rand:Math.random() } ,function(data)
+        {
+		  if(data=='yes') //if correct login detail
+		  {
+		  	$("#msgbox").fadeTo(200,0.1,function()  //start fading the messagebox
+			{ 
+			  //add message and change the class of the box and start fading
+			  $(this).html(':)').addClass('messageboxok').fadeTo(900,1,
+              function()
+			  { 
+			  	 //redirect to secure page
+				 document.location='index.php';
+			  });
+			  
+			});
+		  }
+		  else 
+		  {
+		  	$("#msgbox").fadeTo(200,0.1,function() //start fading the messagebox
+			{ 
+			  //add message and change the class of the box and start fading
+			  $(this).html('You suck!').addClass('messageboxerror').fadeTo(900,1);
+			});		
+          }
+				
+        });
+ 		return false; //not to post the  form physically
+	});
+	//now call the ajax also focus move from 
+	$("#password").blur(function()
+	{
+		$("#login_form").trigger('submit');
+	});
+});
+</script>
+
+<link rel="stylesheet" type="text/css" href="_css/reset.css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href="_css/css3.css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href="_css/general.css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href="_css/init.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="_css/helpers.css" media="screen" /> 
+
+<style type="text/css">
+#login_form input {text-align:center;}
+#msgbox {margin: 13px !important; width:150px;}
+.messagebox{
+	width:100px;
+	margin:0 auto;
+	background:#ffc;
+	padding:3px;
+}
+.messageboxok{
+	width:auto;
+	margin:0 auto;
+	background:#C9FFCA;
+	padding:3px;
+	font-weight:bold;
+	color:#008000;
+	
+}
+.messageboxerror{
+	width:auto;
+	margin:0 auto;
+	background:#C00;
+	padding:3px;
+	font-weight:bold;
+	color:#FFF;
+}
+
+</style>
+</head>
+<body>
+
+ 
+<div class="deadCenter" style="width:369px;">
+<form method="post" action="" id="login_form">
+<div align="center"><img src="_img/androidPirateR.png" border="0"/></div>
+<div align="center">
+<div id="msgbox" style="display:none"></div>
+<input name="username" type="text" id="username" value="" maxlength="20" /><br/>
+<input name="password" type="password" id="password" value="" maxlength="20" /><br/>
+<input name="Submit" type="submit" id="submit" value="Okay" />
+</div>
+</form>
+</div>
+</body>
+</html>

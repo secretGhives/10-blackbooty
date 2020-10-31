@@ -1,0 +1,40 @@
+<VirtualHost *:80>
+ServerName blackbooty
+DocumentRoot "/home/websites/blackbooty"
+
+LogFormat "%h %l %u %t \"%r\" %s %b %v \"%{Referer}i\" \"%{User-Agent}i\"" wusage
+ErrorLog  /home/websites/logs/blackbooty.apache.log
+CustomLog /home/websites/logs/blackbooty.access_log wusage
+
+# Other PHP Directives
+
+# Display all except notices
+php_flag  log_errors on
+php_flag display_errors  Off
+php_value error_reporting 1
+php_value error_log /home/websites/logs/blackbooty.php.log
+
+# -- START -- Non-standard values taken from php.ini on ash.
+php_value max_execution_time 86400
+php_value max_input_time 86400
+php_value memory_limit 1500M
+php_value post_max_size 1024M
+php_value upload_max_filesize 1024M
+# -- END --
+
+SetEnvIf Request_URI "\.pdf$" requested_pdf=pdf
+Header add Content-Disposition "Attachment" env=requested_pdf
+
+<Directory "/home/websites/blackbooty/">
+ allow from all
+ Options +Indexes
+ RewriteEngine on
+ RewriteBase /
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+ AllowOverride All
+</Directory>
+
+</VirtualHost>
+
